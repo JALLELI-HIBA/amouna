@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function moveButton() {
+            var button = document.querySelector('.no');
+            var positionX = Math.random() * (window.innerWidth - button.offsetWidth);
+            var positionY = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = 'absolute';
+            button.style.left = positionX + 'px';
+            button.style.top = positionY + 'px';
+        }
+        
+
+        function showMessage() {
+    // Create div element for GIF
+    var gifDiv = document.createElement('div');
+    gifDiv.classList.add('gif-container');
+    var gifImage = document.createElement('img');
+    gifImage.src = 'https://i.pinimg.com/originals/9d/f6/09/9df609f311902f5555d6cf387b207b9a.gif';
+    gifDiv.appendChild(gifImage);
+
+    // Create div element for message
+    var messageDiv = document.createElement('div');
+    messageDiv.classList.add('message');
+    messageDiv.textContent = 'Nhbk bagrouta '; // Your message here
+
+    // Append GIF and message to body
+    document.body.appendChild(gifDiv);
+    document.body.appendChild(messageDiv);
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="valentines">
+            <div class="envelope"></div>
+            <div class="front"></div>
+            <div class="card">
+                <div class="text">Would you be</br> My Forever </div>
+                <div class="texts">Valentine ?</div>
+                <div class="heart"></div>
+            </div>
+            <div class="hearts">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+                <div class="five"></div>
+            </div>
+            <div class="buttons">
+              <button class="yes" onclick="showMessage()">Yes</button>
+                <button class="no" onclick="moveButton()">No</button>
+            </div>
+        </div>
+    </div>
+    <div class="shadow"></div>
+</body>
+</html>
